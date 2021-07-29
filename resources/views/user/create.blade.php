@@ -5,3 +5,8 @@
     <input type="password" id="password" name="password" placeholder="password">
     <input type="submit" value="submit">
 </form>
+@if( session()->has('alert-message'))
+    <div class="alert {{ session()->get('alert-type') }}">
+        {{ session()->get('alert-message') }}
+    </div>
+@endif
